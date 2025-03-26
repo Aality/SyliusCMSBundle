@@ -20,7 +20,7 @@
                 const richEditor = document.createElement('div')
                 richEditor.setAttribute('id', 'rich-editor')
                 textarea.insertAdjacentElement('afterend', richEditor)
-                // textarea.style.display = 'none'
+                textarea.style.display = 'none'
 
                 const quill = new Quill('#rich-editor', {
                     theme: 'snow'
