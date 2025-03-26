@@ -8,5 +8,9 @@ services:
         autowire: true
         autoconfigure: true
         tags: [ 'controller.service_arguments' ]
+        
+    App\AaPageCmsBundle\EventSubscriber\AdminMenuSubscriber:
+        tags:
+            - { name: kernel.event_subscriber }
 
 
