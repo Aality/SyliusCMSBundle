@@ -1,9 +1,9 @@
 <?php
 
-namespace App\AaPageCmsBundle\Controller;
+namespace App\Bundle\AaPageCmsBundle\Controller;
 
-use App\AaPageCmsBundle\Entity\Page\Page;
-use App\AaPageCmsBundle\Repository\PageRepository;
+use App\Bundle\AaPageCmsBundle\Entity\Page\Page;
+use App\Bundle\AaPageCmsBundle\Repository\PageRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

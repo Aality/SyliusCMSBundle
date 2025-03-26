@@ -1,6 +1,6 @@
 <?php
 // src/CmsBundle/CmsBundle.php
-namespace App\AaPageCmsBundle;
+namespace App\Bundle\AaPageCmsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

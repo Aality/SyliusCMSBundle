@@ -1,10 +1,10 @@
 <?php
 
-namespace App\AaPageCmsBundle\Entity\Page;
+namespace App\Bundle\AaPageCmsBundle\Entity\Page;
 
 use ApiPlatform\Metadata\ApiResource;
-use App\AaPageCmsBundle\Entity\Page\PageInterface;
-use App\AaPageCmsBundle\Repository\PageRepository;
+use App\Bundle\AaPageCmsBundle\Entity\Page\PageInterface;
+use App\Bundle\AaPageCmsBundle\Repository\PageRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 

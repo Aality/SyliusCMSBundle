@@ -1,6 +1,6 @@
 <?php
 // src/CmsBundle/DependencyInjection/CmsExtension.php
-namespace App\AaPageCmsBundle\DependencyInjection;
+namespace App\Bundle\AaPageCmsBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

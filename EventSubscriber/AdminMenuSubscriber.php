@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\AaPageCmsBundle\EventSubscriber;
+namespace App\Bundle\AaPageCmsBundle\EventSubscriber;
 
 use App\Entity\User\AdminUser;
 use Knp\Menu\MenuItem;

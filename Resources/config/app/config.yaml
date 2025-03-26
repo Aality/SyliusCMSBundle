@@ -2,15 +2,34 @@ sylius_resource:
     resources:
         app.page:
             classes:
-                model: App\AaPageCmsBundle\Entity\Page\Page
+                model: App\Bundle\AaPageCmsBundle\Entity\Page\Page
 services:
-    App\AaPageCmsBundle\Controller\PageController:
+    App\Bundle\AaPageCmsBundle\Controller\PageController:
         autowire: true
         autoconfigure: true
         tags: [ 'controller.service_arguments' ]
         
-    App\AaPageCmsBundle\EventSubscriber\AdminMenuSubscriber:
+    App\Bundle\AaPageCmsBundle\EventSubscriber\AdminMenuSubscriber:
         tags:
             - { name: kernel.event_subscriber }
 
 
+sylius_grid:
+    grids:
+        app_admin_page:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: App\Bundle\AaPageCmsBundle\Entity\Page\Page
+            fields:
+                slug:
+                    type: string
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete

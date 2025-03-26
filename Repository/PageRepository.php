@@ -1,6 +1,6 @@
 <?php
 
-namespace App\AaPageCmsBundle\Repository;
+namespace App\Bundle\AaPageCmsBundle\Repository;
 
 use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\AaPageCmsBundle\Entity\Page;
+namespace App\Bundle\AaPageCmsBundle\Entity\Page;
 
 use Sylius\Component\Resource\Model\ResourceInterface;
 
