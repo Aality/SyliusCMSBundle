@@ -28,11 +28,28 @@ final class AdminMenuSubscriber implements EventSubscriberInterface
     {
         /** @var MenuItem $menu */
         $menu        = $event->getMenu();
+        $configurationMenu = $menu->getChild('configuration');
+        $supportMenu = $menu->getChild('official_support');
+
+        $menu->removeChild('configuration');
+        $menu->removeChild('official_support');
 
         $menu
-            ->addChild('jsd', ['route' => 'app_page'])
+            ->addChild('cmsPage')
             ->setLabel('Page CMS')
-            ->setLabelAttribute('icon', 'tabler:adjustments')
+            ->setLabelAttribute('icon', 'tabler:file-description')
         ;
+
+        $menu->addChild($configurationMenu);
+        $menu->addChild($supportMenu);
+
+        $menuPage = $menu->getChild('cmsPage');
+
+        $menuPage->addChild('cmsPageIndex', ['route' => 'app_admin_page_index'])
+        ->setLabel('Pages');
+
+        $menuPage->addChild('cmsPageCreate', ['route' => 'app_admin_page_create'])
+        ->setLabel('New Page');
+
     }
 }
