@@ -1,0 +1,12 @@
+sylius_resource:
+    resources:
+        app.page:
+            classes:
+                model: App\AaPageCmsBundle\Entity\Page\Page
+services:
+    App\AaPageCmsBundle\Controller\PageController:
+        autowire: true
+        autoconfigure: true
+        tags: [ 'controller.service_arguments' ]
+
+

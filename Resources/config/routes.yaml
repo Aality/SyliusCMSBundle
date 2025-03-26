@@ -1,0 +1,9 @@
+app_page:
+    resource: |
+        alias: app.page
+        section: admin
+        templates: "@AaPageCms/admin/page"
+        grid: app_admin_page
+        redirect: index
+    type: sylius.resource
+    prefix: admin
