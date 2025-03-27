@@ -1,0 +1,6 @@
+{% if data and data.channel and data.channel.name %}
+<span class="status status-blue status-lite">
+    <span class="status-dot" style="background-color: {{ data.channel.color|default('#000') }}"></span>
+    <span class="text-nowrap fs-5">{{ data.channel.name }}</span>
+</span>
+{% endif %}

@@ -3,6 +3,7 @@ sylius_resource:
         app.page:
             classes:
                 model: App\Bundle\AaPageCmsBundle\Entity\Page\Page
+                form: App\Bundle\AaPageCmsBundle\Form\Type\PageType
 services:
     App\Bundle\AaPageCmsBundle\Controller\PageController:
         autowire: true
@@ -12,6 +13,12 @@ services:
     App\Bundle\AaPageCmsBundle\EventSubscriber\AdminMenuSubscriber:
         tags:
             - { name: kernel.event_subscriber }
+
+# config/packages/twig.yaml
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    paths:
+        '%kernel.project_dir%/src/Bundle/AaPageCmsBundle/templates': AaPageCmsBundle
 
 
 sylius_grid:
@@ -24,6 +31,12 @@ sylius_grid:
             fields:
                 slug:
                     type: string
+                channel:
+                    type: twig
+                    label: Canal de vente
+                    path: .
+                    options:
+                        template: '@AaPageCmsBundle/shared/grid/field/channel.html.twig'
             actions:
                 main:
                     create:
