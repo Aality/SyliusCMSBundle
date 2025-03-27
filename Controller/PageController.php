@@ -19,6 +19,7 @@ final class PageController extends AbstractController
 
     public function index($slug):Response
     {
+
         $page = $this->em->getRepository(Page::class)->findOneBy(['slug' => $slug]);
             //findOneBy(array('slug' => $slug));
         if (is_null($page)) {

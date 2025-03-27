@@ -7,6 +7,7 @@ use App\Bundle\AaPageCmsBundle\Entity\Page\PageInterface;
 use App\Bundle\AaPageCmsBundle\Repository\PageRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Sylius\Component\Core\Model\ChannelInterface;
 
 #[ORM\Entity(repositoryClass: PageRepository::class)]
 #[ApiResource]
@@ -19,6 +20,10 @@ class Page implements PageInterface
 
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
+
+    #[ORM\ManyToOne(targetEntity: ChannelInterface::class)]
+    #[ORM\JoinColumn(name: 'channel_id', referencedColumnName: 'id', nullable: true)]
+    private ?ChannelInterface $channel = null;
 
     #[ORM\Column(length: 255)]
     private ?string $title = null;
@@ -80,5 +85,16 @@ class Page implements PageInterface
         $this->metaDescription = $metaDescription;
 
         return $this;
+    }
+
+
+    public function getChannel(): ?ChannelInterface
+    {
+        return $this->channel;
+    }
+
+    public function setChannel(?ChannelInterface $channel): void
+    {
+        $this->channel = $channel;
     }
 }
