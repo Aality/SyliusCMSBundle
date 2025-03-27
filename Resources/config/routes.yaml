@@ -1,9 +1,13 @@
 app_page:
-    resource: |
-        alias: app.page
-        section: admin
-        templates: "@AaPageCms/admin/page"
-        grid: app_admin_page
-        redirect: index
-    type: sylius.resource
-    prefix: admin
+  resource: |
+    alias: app.page
+    section: admin
+    templates: "@AaPageCms/admin/page"
+    grid: app_admin_page
+    redirect: index
+  type: sylius.resource
+  prefix: admin
+
+app_page_public:
+  path: /page/{slug}
+  controller: App\Bundle\AaPageCmsBundle\Controller\PageController::index
