@@ -27,7 +27,7 @@
                 });
 
                 quill.on('text-change', (delta, oldDelta, source) => {
-                    const content = quill.getSemanticHTML()
+                    const content = quill.root.innerHTML
                     textarea.value = content
                 });
 
