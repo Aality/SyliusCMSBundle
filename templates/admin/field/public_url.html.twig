@@ -1,0 +1,9 @@
+
+{% if data %}
+    {% set exploded = data|split('|') %}
+    <a href="https://{{ exploded[1] }}{{ path('app_page_public', {'slug':exploded[0]} ) }}" target="_blank">
+        https://{{ exploded[1] }}{{ path('app_page_public', {'slug':exploded[0]} ) }}
+    </a>
+{% else %}
+    <em>URL non disponible</em>
+{% endif %}

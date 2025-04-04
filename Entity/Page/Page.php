@@ -3,7 +3,7 @@
 namespace App\Bundle\AaPageCmsBundle\Entity\Page;
 
 use ApiPlatform\Metadata\ApiResource;
-use App\Bundle\AaPageCmsBundle\Entity\Page\PageInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 use App\Bundle\AaPageCmsBundle\Repository\PageRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -19,6 +19,10 @@ class Page implements PageInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Regex(
+        pattern: '/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
+        message: 'Le slug ne peut contenir que des lettres minuscules, des chiffres et des tirets (pas de tiret en début ou fin, ni consécutifs).'
+    )]
     private ?string $slug = null;
 
     #[ORM\ManyToOne(targetEntity: ChannelInterface::class)]
@@ -96,5 +100,31 @@ class Page implements PageInterface
     public function setChannel(?ChannelInterface $channel): void
     {
         $this->channel = $channel;
+    }
+
+    public function getPublicUrl(): ?string
+    {
+        $slug = $this->getSlug();
+        $channel = $this->getChannel();
+
+        if (!$slug) {
+            return null;
+        }
+
+        if (!$channel && method_exists($this, 'getChannels')) {
+            $channels = $this->getChannels();
+            if ($channels instanceof \Traversable || is_array($channels)) {
+                foreach ($channels as $c) {
+                    $channel = $c;
+                    break;
+                }
+            }
+        }
+
+        if (!$channel) {
+            return null;
+        }
+
+        return $slug . '|' . $channel->getHostname();
     }
 }

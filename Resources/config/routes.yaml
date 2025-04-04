@@ -9,5 +9,5 @@ app_page:
   prefix: admin
 
 app_page_public:
-  path: /page/{slug}
+  path: /{_locale}/page/{slug}
   controller: App\Bundle\AaPageCmsBundle\Controller\PageController::index

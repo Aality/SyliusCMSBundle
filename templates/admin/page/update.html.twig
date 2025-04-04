@@ -6,6 +6,11 @@
     {{ parent() }}
     {% hook 'create#stylesheets' with { _prefixes: prefixes } %}
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet"/>
+    <style>
+        .btn-list .btn:first-child {
+            display: none!important;
+        }
+    </style>
 {% endblock %}
 
 {% block javascripts %}
@@ -36,3 +41,6 @@
     </script>
 {% endblock %}
 
+
+{% block form_buttons %}
+{% endblock %}

@@ -29,7 +29,7 @@ sylius_grid:
                 options:
                     class: App\Bundle\AaPageCmsBundle\Entity\Page\Page
             fields:
-                slug:
+                title:
                     type: string
                 channel:
                     type: twig
@@ -37,6 +37,11 @@ sylius_grid:
                     path: .
                     options:
                         template: '@AaPageCmsBundle/shared/grid/field/channel.html.twig'
+                publicUrl:
+                    type: twig
+                    label: URL finale
+                    options:
+                        template: '@AaPageCmsBundle/admin/field/public_url.html.twig'
             actions:
                 main:
                     create:
