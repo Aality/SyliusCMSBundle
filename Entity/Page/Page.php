@@ -23,6 +23,7 @@ class Page implements PageInterface
         pattern: '/^[a-z0-9]+(?:-[a-z0-9]+)*$/',
         message: 'Le slug ne peut contenir que des lettres minuscules, des chiffres et des tirets (pas de tiret en début ou fin, ni consécutifs).'
     )]
+    #[Assert\NotBlank]
     private ?string $slug = null;
 
     #[ORM\ManyToOne(targetEntity: ChannelInterface::class)]
@@ -30,12 +31,14 @@ class Page implements PageInterface
     private ?ChannelInterface $channel = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank]
     private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $metaDescription = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank]
     private ?string $content = null;
 
     public function getId(): ?int
