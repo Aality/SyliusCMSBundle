@@ -1,6 +1,6 @@
 sylius_resource:
     resources:
-        app.page:
+        aality_cms_page.page:
             classes:
                 model: Aality\SyliusCMSBundle\Entity\Page\Page
                 form: Aality\SyliusCMSBundle\Form\Type\PageType
@@ -25,7 +25,7 @@ twig:
 
 sylius_grid:
     grids:
-        app_admin_page:
+        aality_cms_page:
             driver:
                 name: doctrine/orm
                 options:

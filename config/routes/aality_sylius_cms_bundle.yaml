@@ -1,13 +1,13 @@
-app_page:
+aality_cms_page_admin:
   resource: |
-    alias: app.page
+    alias: aality_cms_page.page
     section: admin
     templates: "@SyliusCMSBundle/admin/page"
-    grid: app_admin_page
+    grid: aality_cms_page
     redirect: index
   type: sylius.resource
   prefix: admin
 
-app_page_public:
+aality_cms_page_public:
   path: /{_locale}/page/{slug}
   controller: Aality\SyliusCMSBundle\Controller\PageController::index
