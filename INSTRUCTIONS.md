@@ -29,7 +29,7 @@ Voici un exemple de fichier `composer.json` à dupliquer et adapter pour votre b
 
 ```json
 {
-  "name": "aality/cms-bundle",
+  "name": "aality/sylius-cms-bundle",
   "description": "Gestion des pages CMS",
   "type": "sylius-plugin",
   "require": {
@@ -63,7 +63,7 @@ Editez composer.json de l'app :
   ],
   "require": {
     "php": "^8.2",
-    "aality/cms-bundle": "1.0.0"
+    "aality/sylius-cms-bundle": "1.0.0"
   }
 }
 ````
@@ -107,7 +107,7 @@ Editez composer.json de l'app :
   ],
   "require": {
     "php": "^8.2",
-    "aality/cms-bundle": "dev-refacto"
+    "aality/sylius-cms-bundle": "dev-refacto"
   }
 }
 ````

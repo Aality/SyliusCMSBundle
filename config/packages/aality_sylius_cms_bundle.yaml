@@ -20,7 +20,7 @@ services:
 twig:
     default_path: '%kernel.project_dir%/templates'
     paths:
-        '%kernel.project_dir%/vendor/aality/cms-bundle/templates': SyliusCMSBundle
+        '%kernel.project_dir%/vendor/aality/sylius-cms-bundle/templates': SyliusCMSBundle
 
 
 sylius_grid:

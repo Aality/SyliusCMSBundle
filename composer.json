@@ -1,5 +1,5 @@
 {
-  "name": "aality/cms-bundle",
+  "name": "aality/sylius-cms-bundle",
   "description": "Gestion des pages CMS",
   "type": "sylius-plugin",
   "require": {
