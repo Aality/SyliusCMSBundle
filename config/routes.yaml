@@ -2,7 +2,7 @@ app_page:
   resource: |
     alias: app.page
     section: admin
-    templates: "@AaPageCms/admin/page"
+    templates: "@SyliusCMSBundle/admin/page"
     grid: app_admin_page
     redirect: index
   type: sylius.resource
@@ -10,4 +10,4 @@ app_page:
 
 app_page_public:
   path: /{_locale}/page/{slug}
-  controller: App\Bundle\AaPageCmsBundle\Controller\PageController::index
+  controller: Aality\SyliusCMSBundle\Controller\PageController::index

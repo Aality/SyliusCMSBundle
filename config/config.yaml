@@ -2,23 +2,25 @@ sylius_resource:
     resources:
         app.page:
             classes:
-                model: App\Bundle\AaPageCmsBundle\Entity\Page\Page
-                form: App\Bundle\AaPageCmsBundle\Form\Type\PageType
+                model: Aality\SyliusCMSBundle\Entity\Page\Page
+                form: Aality\SyliusCMSBundle\Form\Type\PageType
 services:
-    App\Bundle\AaPageCmsBundle\Controller\PageController:
+    Aality\SyliusCMSBundle\Controller\PageController:
         autowire: true
         autoconfigure: true
         tags: [ 'controller.service_arguments' ]
-        
-    App\Bundle\AaPageCmsBundle\EventSubscriber\AdminMenuSubscriber:
+
+    Aality\SyliusCMSBundle\EventSubscriber\AdminMenuSubscriber:
         tags:
             - { name: kernel.event_subscriber }
+        arguments:
+          [ '@security.helper' ]
 
 # config/packages/twig.yaml
 twig:
     default_path: '%kernel.project_dir%/templates'
     paths:
-        '%kernel.project_dir%/src/Bundle/AaPageCmsBundle/templates': AaPageCmsBundle
+        '%kernel.project_dir%/vendor/aality/cms-bundle/templates': SyliusCMSBundle
 
 
 sylius_grid:
@@ -27,7 +29,7 @@ sylius_grid:
             driver:
                 name: doctrine/orm
                 options:
-                    class: App\Bundle\AaPageCmsBundle\Entity\Page\Page
+                    class: Aality\SyliusCMSBundle\Entity\Page\Page
             fields:
                 title:
                     type: string
@@ -36,12 +38,12 @@ sylius_grid:
                     label: Canal de vente
                     path: .
                     options:
-                        template: '@AaPageCmsBundle/shared/grid/field/channel.html.twig'
+                        template: '@SyliusCMSBundle/shared/grid/field/channel.html.twig'
                 publicUrl:
                     type: twig
                     label: URL finale
                     options:
-                        template: '@AaPageCmsBundle/admin/field/public_url.html.twig'
+                        template: '@SyliusCMSBundle/admin/field/public_url.html.twig'
             actions:
                 main:
                     create:

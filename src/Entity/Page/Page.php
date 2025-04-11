@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Bundle\AaPageCmsBundle\Entity\Page;
+namespace Aality\SyliusCMSBundle\Entity\Page;
 
 use ApiPlatform\Metadata\ApiResource;
 use Symfony\Component\Validator\Constraints as Assert;
-use App\Bundle\AaPageCmsBundle\Repository\PageRepository;
+use Aality\SyliusCMSBundle\Repository\PageRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Core\Model\ChannelInterface;

@@ -1,0 +1,14 @@
+{
+  "name": "aality/cms-bundle",
+  "description": "Gestion des pages CMS",
+  "type": "sylius-plugin",
+  "require": {
+    "php": ">=8.2"
+  },
+  "version": "1.0.0",
+  "autoload": {
+    "psr-4": {
+      "Aality\\SyliusCMSBundle\\": "src/"
+    }
+  }
+}
