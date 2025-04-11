@@ -16,6 +16,7 @@ Ce guide vous explique comment créer un petit bundle en suivant les conventions
 
 En cours de taff sur les conventions de nommages, les exemples ne reflètent pas bien ce qu'il faut faire pour le moment.
 
+---
 ## 1 - Première étape : création du bundle
 
 Créer un dépot github, on ne va pas l'inclure tout de suite mais le nom du dépot est important pour la suite.
@@ -46,6 +47,7 @@ Voici un exemple de fichier `composer.json` à dupliquer et adapter pour votre b
 
 Une fois en place et votre code de base présent, pensez à faire un ``composer install``
 
+---
 # 2 - Inclure le bundle via un path local
 
 
@@ -87,7 +89,7 @@ Puis, pour prendre en compte les modifications dans l'app :
 
 ``composer require aality/mon-bundle`` dans le dossier de votre app.
 
-
+---
 
 ## 3 - Inclure en mode VCS
 
@@ -117,6 +119,43 @@ Si on veut main : dev-main
 Si on a créé des tags, on peut les utiliser directement : 1.0.0 (^1.*, >= 1.0.2 etc.)
 
 ### Installer le bundle !
+
+
+#### Si le dépot est privé, une étape s'impose
+
+---
+Avez-vous un token d'accès Github ?
+
+```
+Générer un Token d'Accès Personnel sur GitHub :
+
+Connectez-vous à votre compte GitHub.
+Allez dans Settings > Developer settings (tout en bas) > Personal access tokens.
+Cliquez sur Generate new token.
+Sélectionnez les autorisations nécessaires : repo 
+Générez le token et copiez-le. 
+
+Ouvrez le Terminal sur votre Mac.
+Créez ou éditez le fichier auth.json de Composer.
+
+Ce fichier se trouve généralement dans le répertoire ~/.composer
+
+vim ~/.composer/auth.json
+
+Puis copier le prochain bloc.
+```
+
+
+```json
+{
+    "github-oauth": {
+        "github.com": "votre-token-d-acces"
+    }
+}
+```
+
+---
+#### Dépot public ou privé avoir créé un token
 
 Maintenant, faites simplement : 
 ``composer require aality/mon-bundle:dev-ma_branch``
