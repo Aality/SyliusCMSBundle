@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Bundle\AaPageCmsBundle\EventSubscriber;
+namespace Aality\SyliusCMSBundle\EventSubscriber;
 
 use App\Entity\User\AdminUser;
 use Knp\Menu\MenuItem;
@@ -45,11 +45,9 @@ final class AdminMenuSubscriber implements EventSubscriberInterface
 
         $menuPage = $menu->getChild('cmsPage');
 
-        $menuPage->addChild('cmsPageIndex', ['route' => 'app_admin_page_index'])
-        ->setLabel('Pages');
+        $menuPage->addChild('cmsPageIndex', ['route' => 'aality_cms_page_admin_page_index'])->setLabel('Pages');
 
-        $menuPage->addChild('cmsPageCreate', ['route' => 'app_admin_page_create'])
-        ->setLabel('New Page');
+        $menuPage->addChild('cmsPageCreate', ['route' => 'aality_cms_page_admin_page_create'])->setLabel('New Page');
 
     }
 }

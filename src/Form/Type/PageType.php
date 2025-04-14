@@ -1,12 +1,12 @@
 <?php
-// src/Bundle/AaPageCmsBundle/Form/Type/PageType.php
-namespace App\Bundle\AaPageCmsBundle\Form\Type;
+// src/Bundle/SyliusCMSBundle/Form/Type/PageType.php
+namespace Aality\SyliusCMSBundle\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Sylius\Bundle\ChannelBundle\Form\Type\ChannelChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use App\Bundle\AaPageCmsBundle\Entity\Page\Page;
+use Aality\SyliusCMSBundle\Entity\Page\Page;
 
 class PageType extends AbstractResourceType
 {

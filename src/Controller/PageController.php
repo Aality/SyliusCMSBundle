@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Bundle\AaPageCmsBundle\Controller;
+namespace Aality\SyliusCMSBundle\Controller;
 
-use App\Bundle\AaPageCmsBundle\Entity\Page\Page;
-use App\Bundle\AaPageCmsBundle\Repository\PageRepository;
+use Aality\SyliusCMSBundle\Entity\Page\Page;
+use Aality\SyliusCMSBundle\Repository\PageRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Sylius\Component\Channel\Context\ChannelContextInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -32,7 +32,7 @@ final class PageController extends AbstractController
             throw new NotFoundHttpException('Page not found.');
         }
 
-        return $this->render('@AaPageCmsBundle/page.html.twig',
+        return $this->render('@SyliusCMSBundle/page.html.twig',
             array('page' => $page)
         );
     }
