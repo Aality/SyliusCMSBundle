@@ -3,6 +3,8 @@ CMS Page Bundle for Sylius
 
 If you use recipes, make sure you have this in your composer.json
 
+(https://api.github.com/repos/Aality/recipes/contents/index.json?ref=flex/main)
+
 ```json
     "extra": {
         "symfony": {
@@ -18,3 +20,5 @@ If you use recipes, make sure you have this in your composer.json
 ```
 
 Otherwise, copy files from config dir in your app's config dir.
+
+Clear cache and enjoy !
