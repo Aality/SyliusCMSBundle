@@ -169,3 +169,13 @@ Idem ici, à chaque modif du bundle, il faudra commit et pousser les modificatio
 WIP
 // Peut être composer update ok ?? Mais risqué.
 // Composer update aality/mon-bundle ??
+
+
+# Recipes
+
+## Provide a recipe to perform automated installa actions
+
+## How recipe is distribute : 
+https://stackoverflow.com/questions/71692969/how-to-generate-a-private-recipe-json-from-the-contents-of-a-recipe-directory
+https://github.com/symfony-tools/recipes-checker
+
