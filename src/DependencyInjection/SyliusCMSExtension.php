@@ -14,7 +14,7 @@ class SyliusCMSExtension extends Extension implements PrependExtensionInterface
 
     public function getAlias(): string
     {
-        return 'sylius_cms';
+        return 'aality_sylius_cms';
     }
     public function load(array $configs, ContainerBuilder $container): void
     {

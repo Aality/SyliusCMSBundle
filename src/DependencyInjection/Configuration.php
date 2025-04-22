@@ -20,7 +20,7 @@ final class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('sylius_cms');
+        $treeBuilder = new TreeBuilder('aality_sylius_cms');
         return $treeBuilder;
     }
 }
