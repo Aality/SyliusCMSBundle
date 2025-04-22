@@ -74,20 +74,17 @@ Path à adapter.
 
 ### Attention 
 ```text 
-Dès que l'on va installer le bundle, on va en faire une copie locale dans notre vendor.
-Modifier le code source n'aura pas d'impact tant qu'on ne recommence pas l'installation
+Dès que l'on va installer le bundle, on va créer un lien symbolique dans notre vendor.
+Modifier le code source du bundle, dans son dossier, aura un impact immédiat sur les projets dans lesquels il est inclus
 ````
-Pour installer, puis mettre à jour : 
+Pour installer : 
 
 ``composer require aality/mon-bundle``
 
-Pour chaque modif du bundle (ajout de fichiers etc), afin de tester : 
+Pour chaque modif du bundle (ajout de fichiers etc) : 
 
 ``composer install`` dans le bundle pour générer l'autoload, inclure les dépendances etc.
 
-Puis, pour prendre en compte les modifications dans l'app : 
-
-``composer require aality/mon-bundle`` dans le dossier de votre app.
 
 ---
 
