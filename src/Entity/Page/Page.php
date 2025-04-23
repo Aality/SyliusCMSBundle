@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Core\Model\ChannelInterface;
 
 #[ORM\Entity(repositoryClass: PageRepository::class)]
+#[ORM\Table(name: 'aality_sylius_cms_page')]
 #[ApiResource]
 class Page implements PageInterface
 {
