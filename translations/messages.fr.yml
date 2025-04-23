@@ -1,0 +1,8 @@
+aality_cms_page:
+    ui:
+        pages: 'pages'
+        page: 'page'
+        associated_channel: 'Canal associé'
+        all_channels: 'Tous les canaux'
+
+

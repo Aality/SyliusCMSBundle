@@ -23,10 +23,10 @@ class PageType extends AbstractResourceType
             ->add('metaDescription')
             ->add('content')
             ->add('channel', ChannelChoiceType::class, [
-                'label' => 'Canal associé',
+                'label' => 'aality_cms_page.ui.associated_channel',
                 'choice_label' => 'name',
                 'required' => false,
-                'placeholder' => 'Tous les canaux',
+                'placeholder' => 'aality_cms_page.ui.all_channels',
             ])
         ;
     }
