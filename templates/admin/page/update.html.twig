@@ -31,6 +31,8 @@
                 theme: 'snow'
             });
 
+            quill.root.innerHTML = textarea.value
+
             quill.on('text-change', (delta, oldDelta, source) => {
                 const content = quill.root.innerHTML
                 textarea.value = content
